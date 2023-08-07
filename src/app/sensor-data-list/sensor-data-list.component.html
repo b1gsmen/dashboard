@@ -1,0 +1,35 @@
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr >
+      <th>Description</th>
+      <th>Temperature</th>
+      <th>Humidity</th>
+      <th>Creation date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of sensorDataList">
+      <th>{{item.sensorDescription}}</th>
+      <th>{{item.temperature}}</th>
+      <th>{{item.humidity}}</th>
+      <th>{{item.creationDate}}</th>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <!-- Center the pagination buttons -->
+  <div class="d-flex justify-content-center mt-3">
+    <div class="btn-group" role="group" aria-label="Pagination">
+      <button (click)="loadPage(0, pageSize)" [disabled]="pageNumber === 0" class="btn btn-primary">First Page</button>
+      <button (click)="loadPreviousPage()" [disabled]="pageNumber === 0" class="btn btn-primary">Previous Page</button>
+      <span (click)="loadPage(0, pageSize)" class="btn btn-secondary btn-lg rounded-circle">{{ 1 }}</span>
+      <span class="btn btn-secondary btn-lg rounded-circle">{{ pageNumber + 1 }}</span>
+      <span (click)="loadPage(getLastPageNumber(), pageSize)" class="btn btn-secondary btn-lg rounded-circle">{{ totalPages }}</span>
+      <button (click)="loadNextPage()" [disabled]="sensorDataList.length < pageSize" class="btn btn-primary">Next Page</button>
+      <button (click)="loadPage(getLastPageNumber(), pageSize)" [disabled]="sensorDataList.length < pageSize" class="btn btn-primary">Last Page</button>
+    </div>
+  </div>
+
+</div>

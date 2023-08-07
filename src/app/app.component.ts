@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mushroominotor-frontend';
+  title = 'b1gs mushroom chamber';
 }

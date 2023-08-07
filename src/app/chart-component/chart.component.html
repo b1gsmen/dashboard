@@ -1,0 +1,26 @@
+<div class="container">
+
+  <div class="row">
+    <div class="btn-group" data-toggle="buttons">
+      <label class="btn btn-outline-primary" [class.active]="selectedChartType === 'line'">
+        <input type="radio" name="chartType" value="line" [(ngModel)]="selectedChartType" (ngModelChange)="onChartTypeChange()" > Line Chart
+      </label>
+      <label class="btn btn-outline-primary" [class.active]="selectedChartType === 'bar'">
+        <input type="radio" name="chartType" value="bar" [(ngModel)]="selectedChartType" (ngModelChange)="onChartTypeChange()" > Bar Chart
+      </label>
+      <!-- Add more radio buttons for other chart types as needed -->
+    </div>
+  </div>
+
+  <div style="display: block">
+    <div *ngFor="let dataItem of lineChartData; let i = index">
+      <canvas baseChart
+              [datasets]="dataItem"
+              [labels]="lineChartLabels[i]"
+              [options]="lineChartOptions[i]"
+              [type]="selectedChartType">
+      </canvas>
+    </div>
+  </div>
+
+</div>

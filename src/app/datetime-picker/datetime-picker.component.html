@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <div class="form-group d-flex align-items-center">
+        <label for="startPicker" class="mr-2 fancy-label">Start Date:</label>
+        <ng2-flatpickr #startPicker [config]="startOptions" (ngModelChange)="onStartDateSelected($event)"></ng2-flatpickr>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group d-flex align-items-center">
+        <label for="endPicker" class="mr-2 fancy-label">End Date:</label>
+        <ng2-flatpickr #endPicker [config]="endOptions" (ngModelChange)="onEndDateSelected($event)"></ng2-flatpickr>
+      </div>
+    </div>
+  </div>
+</div>

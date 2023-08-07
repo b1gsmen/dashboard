@@ -1,0 +1,13 @@
+/* Center the content vertically */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+/* Add padding to the top and bottom of the section */
+.py-5 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}

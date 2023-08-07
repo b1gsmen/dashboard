@@ -1,0 +1,70 @@
+<div class="container mt-5" *ngIf="deviceConfig">
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Sensor:</h3>
+      <div class="mb-3">
+        <label class="form-label">Sensor Data Interval(sec):</label>
+        <div class="input-group mb-3">
+          <input type="number" class="form-control" [(ngModel)]="deviceConfig.sensorDataInterval">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Sensor Read Interval(sec):</label>
+        <div class="input-group mb-3">
+          <input type="number" class="form-control" [(ngModel)]="deviceConfig.sensorReadInterval">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <h3>Fan:</h3>
+      <div class="mb-3">
+        <label class="form-label">Fan Work Interval(min):</label>
+        <div class="input-group mb-3">
+          <input type="number" class="form-control" [(ngModel)]="deviceConfig.fanWorkInterval">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Fan Work Period Interval(min):</label>
+        <div class="input-group mb-3">
+          <input type="number" class="form-control" [(ngModel)]="deviceConfig.fanWorkPeriodInterval">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <h3>Pump/Humidity:</h3>
+      <div class="mb-3">
+        <label class="form-label">Pump Work Interval(sec):</label>
+        <div class="input-group mb-3">
+          <input type="number" class="form-control" [(ngModel)]="deviceConfig.pumpWorkInterval">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Humidity Threshold(%):</label>
+        <div class="input-group mb-3">
+          <input type="number" class="form-control" [(ngModel)]="deviceConfig.humidityThreshold">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Single "Save" button -->
+  <div class="row mt-3 justify-content-center">
+    <button class="btn btn-primary col-md-6 col-sm-6 col-6" (click)="saveForm()">Save</button>
+  </div>
+
+  <div class="d-flex justify-content-between">
+    <div>
+      <button class="btn btn-success me-2" (click)="switchRelay1()">Switch Relay 1</button>
+      <button class="btn btn-success me-2" (click)="switchRelay2()">Switch Relay 2</button>
+    </div>
+    <div>
+      <button class="btn btn-danger me-2" (click)="disableRelay1()">Disable Relay 1</button>
+      <button class="btn btn-danger" (click)="disableRelay2()">Disable Relay 2</button>
+    </div>
+  </div>
+</div>

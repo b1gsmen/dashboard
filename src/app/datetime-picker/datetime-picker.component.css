@@ -1,0 +1,21 @@
+/* Custom class for the fancy label */
+.fancy-label {
+  font-weight: bold;
+  color: #007bff; /* You can change the color to any desired color */
+}
+
+/* Custom class for adding space between label and picker */
+.form-group {
+  margin-bottom: 10px; /* Adjust the margin value as needed */
+}
+
+/* Additional styles for the date picker container */
+.date-picker-container {
+  /* Add any additional styles for the date picker container here */
+}
+
+/* If you want to adjust the width of the date pickers */
+.date-picker-container .form-group {
+  flex: 1; /* This will make the date pickers equally share the available width */
+  max-width: 250px; /* You can adjust the max-width as needed */
+}
